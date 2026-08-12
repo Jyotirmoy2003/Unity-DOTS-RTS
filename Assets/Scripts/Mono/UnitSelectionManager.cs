@@ -28,10 +28,17 @@ public class UnitSelectionManager : MonoSingleton<UnitSelectionManager>
             //Deselect all entity
             EntityQuery entityQuery = new EntityQueryBuilder(Allocator.Temp).WithAll<Selected>().Build(entityManager);
             NativeArray<Entity>entityArray = entityQuery.ToEntityArray(Allocator.Temp);
+
+            NativeArray<Selected> selectedArray = entityQuery.ToComponentDataArray<Selected>(Allocator.Temp);
             for(int i=0;i<entityArray.Length;i++)
             {
                 entityManager.SetComponentEnabled<Selected>(entityArray[i],false);
+                Selected selected = selectedArray[i];
+                selected.onDeselected = true;
+                entityManager.SetComponentData(entityArray[i],selected);
             }
+            
+
 
 
             Rect selectionArea = GetSelectedAreaRect();
@@ -53,6 +60,9 @@ public class UnitSelectionManager : MonoSingleton<UnitSelectionManager>
                     if(selectionArea.Contains(unitScreenPosition)) //Unit is inside the selection area
                     {
                         entityManager.SetComponentEnabled<Selected>(entityArray[i],true);
+                        Selected selected  = entityManager.GetComponentData<Selected>(entityArray[i]);
+                        selected.onSelected = true;
+                        entityManager.SetComponentData(entityArray[i],selected);
                     }
                 }
             }
@@ -64,7 +74,7 @@ public class UnitSelectionManager : MonoSingleton<UnitSelectionManager>
                 CollisionWorld collisionWorld = physicsWorldSingleton.CollisionWorld;
 
                 UnityEngine.Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-                int unitLayer = 6;
+                
                 RaycastInput raycastInput = new RaycastInput
                 {
                    Start = cameraRay.GetPoint(0f),
@@ -72,15 +82,19 @@ public class UnitSelectionManager : MonoSingleton<UnitSelectionManager>
                    Filter = new CollisionFilter
                    {
                        BelongsTo = ~0u,
-                       CollidesWith = 1u << unitLayer,
+                       CollidesWith = 1u << GameAsssets.UNITS_LAYER,
                        GroupIndex = 0,
                    } 
                 };
                 if(collisionWorld.CastRay(raycastInput,out Unity.Physics.RaycastHit raycastHit))
                 {
-                    if(entityManager.HasComponent<Unit>(raycastHit.Entity))
+                    if(entityManager.HasComponent<Unit>(raycastHit.Entity) && entityManager.HasComponent<Selected>(raycastHit.Entity))
                     {
+                        //hit a unit
                         entityManager.SetComponentEnabled<Selected>(raycastHit.Entity,true);
+                        Selected selected  = entityManager.GetComponentData<Selected>(raycastHit.Entity);
+                        selected.onSelected = true;
+                        entityManager.SetComponentData(raycastHit.Entity,selected);
                     }
                 }
 

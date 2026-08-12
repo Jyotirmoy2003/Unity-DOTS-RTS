@@ -23,8 +23,5 @@ public class MouseWorldPosition : MonoSingleton<MouseWorldPosition>
         }
     }
 
-    void Update()
-    {
-        Debug.Log(GetPosition());
-    }
+    
 }
