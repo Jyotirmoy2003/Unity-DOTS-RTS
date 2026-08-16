@@ -119,6 +119,90 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &79280318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3612386526574049613, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
+  m_PrefabInstance: {fileID: 1607584858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &79280330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79280318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bd10a722ec35747be161086e8bb4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomWalkingAuthoring
+  targetPoisition:
+    x: 11
+    y: 0
+    z: 12
+  originPosition:
+    x: 11
+    y: 0
+    z: 12
+  distanceMin: 3
+  distanceMax: 10
+--- !u!1001 &86093253
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.91361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.80402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014546639496424144, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_Name
+      value: SolderUnit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
 --- !u!1 &98086794
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +248,111 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityRefrencesAuthoring
   bulletPrefabGameobject: {fileID: 8221146942900730731, guid: 08f223bcf30036247ae812099b295ebd, type: 3}
+  zombiePrefabGameobject: {fileID: 3612386526574049613, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
+--- !u!1 &382477480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 382477481}
+  - component: {fileID: 382477482}
+  m_Layer: 0
+  m_Name: ZombieSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &382477481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382477480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.67, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &382477482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382477480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81db4eba7fd93f943969eec8b74f454a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZombieSpwanerAuthoring
+  timerMax: 1.5
+  randomWalkingDistanceMin: -2
+  randomWalkingDistanceMax: 2
+--- !u!1001 &797071384
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.91361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.55402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014546639496424144, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_Name
+      value: SolderUnit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
 --- !u!1001 &1159300989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,12 +469,192 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3612386526574049613, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 79280330}
   m_SourcePrefab: {fileID: 100100000, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
+--- !u!1001 &1876391979
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.91361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5540199
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014546639496424144, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_Name
+      value: SolderUnit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+--- !u!1001 &2045604750
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.91361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.55402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014546639496424144, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_Name
+      value: SolderUnit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+--- !u!1001 &2067819491
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.91361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.30402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755473515945564, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014546639496424144, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
+      propertyPath: m_Name
+      value: SolderUnit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08b37f53bb144b2438739a7cc6872c38, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 382477481}
   - {fileID: 98086795}
   - {fileID: 1159300989}
+  - {fileID: 2067819491}
+  - {fileID: 797071384}
+  - {fileID: 2045604750}
+  - {fileID: 86093253}
+  - {fileID: 1876391979}
   - {fileID: 1607584858}

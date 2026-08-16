@@ -20,22 +20,24 @@ partial struct BulletMoverSystem : ISystem
                 entityCommandBuffer.DestroyEntity(entity);
                 break;
             }
-            LocalTransform targetTransform = SystemAPI.GetComponent<LocalTransform>(target.ValueRO.targetEntity);
-            float distanceBeforeSq = math.distancesq(localTransform.ValueRO.Position,targetTransform.Position);
+            LocalTransform targetLocalTransform = SystemAPI.GetComponent<LocalTransform>(target.ValueRO.targetEntity);
+            ShootVictim targetShootVictime = SystemAPI.GetComponent<ShootVictim>(target.ValueRO.targetEntity);
+            float3 targetPosition = targetLocalTransform.TransformPoint(targetShootVictime.hitLocalPostion);
+            float distanceBeforeSq = math.distancesq(localTransform.ValueRO.Position,targetPosition);
             
-            float3 moveDirection = targetTransform.Position - localTransform.ValueRO.Position;
+            float3 moveDirection = targetPosition - localTransform.ValueRO.Position;
             moveDirection = math.normalize(moveDirection);
 
 
             localTransform.ValueRW.Position += moveDirection * bullet.ValueRO.speed * SystemAPI.Time.DeltaTime;
 
-            float distanceAfterSq = math.distancesq(localTransform.ValueRO.Position,targetTransform.Position);
+            float distanceAfterSq = math.distancesq(localTransform.ValueRO.Position,targetPosition);
             if(distanceAfterSq >distanceBeforeSq)
             {
-                localTransform.ValueRW.Position = targetTransform.Position;
+                localTransform.ValueRW.Position = targetPosition;
             }
             float destroyDistanceSq= .2f;
-            if(math.distancesq(localTransform.ValueRO.Position,targetTransform.Position )<= destroyDistanceSq)
+            if(math.distancesq(localTransform.ValueRO.Position,targetPosition )<= destroyDistanceSq)
             {
                 //clsoe enough to damage target
                 RefRW<Health> targetHealth = SystemAPI.GetComponentRW<Health>(target.ValueRO.targetEntity);
