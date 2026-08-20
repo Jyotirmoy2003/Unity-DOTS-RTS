@@ -265,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &382477481
 Transform:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 382477480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.67, y: 0, z: 0}
+  m_LocalPosition: {x: 14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -294,8 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieSpwanerAuthoring
   timerMax: 1.5
-  randomWalkingDistanceMin: -2
-  randomWalkingDistanceMax: 2
+  randomWalkingDistanceMin: 3
+  randomWalkingDistanceMax: 10
 --- !u!1001 &797071384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -422,9 +422,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZoombieUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 3612386526574049613, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4450180329909995418, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
       propertyPath: healthAmount
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5704716109917343169, guid: e8a1a48ace7b7ac408f2c8acf85eee02, type: 3}
       propertyPath: m_LocalPosition.x

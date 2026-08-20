@@ -254,6 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShootAttackAuthoring
   timerMax: 0.2
-  damageAmount: 0
+  damageAmount: 5
   attackDistance: 13
   bulletSpawnPositionTransform: {fileID: 7680578515049722124}

@@ -10,7 +10,8 @@ partial struct ZombieSpawnerySystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         EntityRefrences entityRefrences = SystemAPI.GetSingleton<EntityRefrences>();
-        EntityCommandBuffer entityCommandBuffer =  SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>().CreateCommandBuffer(state.WorldUnmanaged);
+        EntityCommandBuffer entityCommandBuffer =  
+        SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>().CreateCommandBuffer(state.WorldUnmanaged);
         
         
         foreach((RefRO<LocalTransform> localTransform, RefRW<ZombieSpwaner> zombieSpawner) 
